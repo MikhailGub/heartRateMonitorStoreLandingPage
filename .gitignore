@@ -1,7 +1,7 @@
 /node_modules
 /src/icons
-src/img
-package-lock.json
+/src/img
+/package-lock.json
 /README.md
 
 # testing
