@@ -33,12 +33,18 @@
             border: none
     &__content
         margin-top: 60px
+        display: none
+        justify-content: space-between
+        flex-wrap: wrap
+        &_active
+            display: flex
     &-item
         width: 300px
         min-height: 440px
         border: 2px solid #e8e8e8
         padding: 20px 20px 26px 20px
         overflow: hidden
+        margin-bottom: 20px
         &__img
             display: block
             margin: 0 auto
@@ -56,6 +62,7 @@
             font-weight: 300
             font-size: 14px
             text-align: center
+            width: 255px
         &__link
             display: block
             margin-top: 17px
@@ -122,3 +129,16 @@
                     background-color: $main-color
                     left: -14px
                     top: 7px
+        &__back
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(calc(-50% - 19px))
+            display: block
+            color: $main-color
+            font-size: 14px
+            font-weight: 500
+            text-decoration: underline
+            text-transform: uppercase
+            &:hover
+                color: $main-color
