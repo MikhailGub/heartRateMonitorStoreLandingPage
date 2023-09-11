@@ -35,4 +35,30 @@ $(document).ready(function(){
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
 
+
+    //Modal
+    $('[data-modal=consultation]').on('click', function() {
+        $('.overlay, #consultation').fadeIn('slow');
+    });
+    $('.modal__close').on('click', function() {
+        $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+    });
+
+    $('.button_mini').each(function(i) {
+        $(this).on('click', function() {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn('slow');
+        })
+    });
+
+    $(window).on('click', function(e) {
+        if (e.target.classList.contains('overlay')) {
+            $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+        }
+    });
+    $(document).keyup(function(e) {
+        if (e.keyCode === 27) {   // esc
+           $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+        }
+      });
 });
