@@ -3,6 +3,8 @@
 /src/img
 /package-lock.json
 /README.md
+src/mailer/smart.php
+dist/mailer/smart.php
 
 # testing
 /coverage
